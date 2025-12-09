@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Dev Bootcamp</title>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body id="top" class="bg-gray-100">
+
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="flex justify-between items-center max-w-5xl mx-auto px-4 py-4">
+      <h1 class="text-xl font-bold text-blue-600">
+        <span id="typing"></span>
+      </h1>
+      <a href="#features" class="bg-blue-600 hover:bg-blue-700 transition text-white px-4 py-2 rounded-full">Join now</a>
+    </div>
+  </header>
+
+  <section class="bg-blue-600 text-white text-center py-24">
+    <h2 class="text-4xl font-extrabold mb-2 tracking-wide">Web Development 🚀</h2>
+    <p class="text-sm italic mb-2">lagi belajar banhh😜</p>
+    <p class="text-lg mb-6">HTML, CSS, CSS TAILWIND kak</p>
+    <a href="#features" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold inline-block hover:scale-105 transition">Mulai Sekarang</a>
+  </section>
+
+  <section id="features" class="py-16 max-w-5xl mx-auto px-4">
+    <h3 class="text-3xl font-bold text-center mb-10">Fitur ngada-ngada</h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!--kotak 1-->
+      <div class="p-6 border rounded-xl border-gray-300 bg-white shadow-sm hover:shadow-md transition hover:-translate-y-1">
+        <div class="text-3xl mb-4">🧑‍💻</div>
+        <h4 class="font-bold mb-2 text-lg">Hand-on</h4>
+        <p>Build Project ngab</p>
+      </div>
+
+      <!--kotak 2-->
+      <div class="p-6 border rounded-xl border-gray-300 bg-white shadow-sm hover:shadow-md transition hover:-translate-y-1">
+        <div class="text-3xl mb-4">⚡</div>
+        <h4 class="font-bold mb-2 text-lg">pest trek</h4>
+        <p>Belajar cepett</p>
+      </div>
+
+      <!--kotak 3-->
+      <div class="p-6 border rounded-xl border-gray-300 bg-white shadow-sm hover:shadow-md transition hover:-translate-y-1">
+        <div class="text-3xl mb-4">😊</div>
+        <h4 class="font-bold mb-2 text-lg">Beginner Friendly</h4>
+        <p>Pemula pun auto ngerti</p>
+      </div>
+    </div>
+  </section>
+
+  <!--CTA Section-->
+  <section id="cta" class="bg-blue-600 text-white text-center py-20">
+    <h3 class="text-3xl font-bold mb-4">Ready to Start? 🤔</h3>
+    <p class="mb-4">Makasih buat Aksademyy. Next time Cyber Security dong hhe😁</p>
+    <a href="#top" class="bg-yellow-400 hover:bg-yellow-300 transition text-black px-8 py-3 rounded-full font-bold inline-block">Join</a>
+  </section>
+
+  <footer class="bg-gray-900 text-white text-center py-4 mt-10">
+    <p>&copy; 2025 Web Dev — rycode-me</p>
+  </footer>
+
+  <!--Typing Effect-->
+  <script>
+    const text = "rycode-me.";
+    const element = document.getElementById("typing");
+    let i = 0;
+    let isDeleting = false;
+
+    function typingEffect() {
+      if (!isDeleting) {
+        element.textContent = text.slice(0, i + 1);
+        i++;
+        if (i === text.length) {
+          setTimeout(() => isDeleting = true, 1000);
+        }
+      } else {
+        element.textContent = text.slice(0, i - 1);
+        i--;
+        if (i === 0) {
+          isDeleting = false;
+        }
+      }
+    }
+
+    setInterval(typingEffect, 150);
+  </script>
+
+</body>
+</html>
